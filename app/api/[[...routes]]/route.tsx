@@ -575,7 +575,7 @@ console.log("all fetched")
         alignItems: 'center',
         justifyContent: 'center',
         height: '100%',
-        background: 'linear-gradient(to right, #6ec007, #6ec007)',
+        background: 'linear-gradient(to right, #FFD580, #FFD580)',
         backgroundSize: '100% 100%',
       }}>
         <div style={{ 
@@ -667,7 +667,7 @@ app.frame('/account/arb/:address/otherTokens', async (c) => {
         alignItems: 'center',
         justifyContent: 'center',
         height: '100%',
-        background: 'linear-gradient(to right, #6ec007, #6ec007)',
+        background: 'linear-gradient(to right, #FFD580, #FFD580)',
         backgroundSize: '100% 100%',
       }}>
         {/* @ts-ignore  */}
