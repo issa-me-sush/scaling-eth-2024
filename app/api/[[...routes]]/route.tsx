@@ -388,7 +388,7 @@ app.frame('/trx/arb/:hash', async (c) => {
   const { hash } = c.req.param();
 
   // Fetch transaction details using the provided hash
-  const response = await fetch(`https://nova-explorer.arbitrum.io/api/v2/transactions/${hash}`);
+  const response = await fetch(`https://api-nova.arbiscan.io/api/transactions/${hash}`);
 console.log("hash",hash)
   if (!response.ok) {
     // Return an error message or image
@@ -545,14 +545,14 @@ app.frame('/account/arb/:address', async (c) => {
   const { address } = c.req.param();
 
   // Fetch Ethereum balance and transaction counts (using placeholder URLs)
-  const balanceResponse = await fetch(`https://nova-explorer.arbitrum.io/api?module=account&action=balance&address=${address}`);
+  const balanceResponse = await fetch(`https://api-nova.arbiscan.io/api?module=account&action=balance&address=${address}&apikey=626NRKMVFF2BI4BRPHPHBE9PKQVDIGWZ8I`);
   
-  console.log("balance response fetched")
-  const txResponse = await fetch(`https://nova-explorer.arbitrum.io/api?module=account&action=txlist&address=${address}`);
-  const tokenTxResponse = await fetch(`https://nova-explorer.arbitrum.io/api?module=account&action=tokentx&address=${address}`);
+  console.log("balance response fetched", balanceResponse)
+  const txResponse = await fetch(`https://api-nova.arbiscan.io/api?module=account&action=txlist&address=${address}&apikey=626NRKMVFF2BI4BRPHPHBE9PKQVDIGWZ8I`);
+  const tokenTxResponse = await fetch(`https://api-nova.arbiscan.io/api?module=account&action=tokentx&address=${address}&apikey=626NRKMVFF2BI4BRPHPHBE9PKQVDIGWZ8I`);
   // const tokenNFTTxResponse = await fetch(`https://explorer-api-testnet.morphl2.io/api?module=account&action=tokennfttx&address=${address}`);
 
-  // Parse the responses
+  // // Parse the responses
   const balanceData = await balanceResponse.json();
   console.log("balance data",balanceData)
   const txData = await txResponse.json();
@@ -592,7 +592,7 @@ console.log("all fetched")
             padding: '0 120px',
             whiteSpace: 'pre-wrap',
  }}>
-          {`mETH Balance: ${formatEther(ethBalance)}`}
+          {`ETH Balance: ${formatEther(ethBalance)}`}
         </div>
         <div style={{ 
             display: 'flex',
@@ -640,7 +640,7 @@ console.log("all fetched")
             padding: '0 120px',
             whiteSpace: 'pre-wrap',
  }}>
-          {/* {`ERC-721 Transfers: ${erc721Count}`} */}
+          {`ERC-721 Transfers: ${erc721Count}`}
         </div>
       </div>
     ),
@@ -655,7 +655,7 @@ app.frame('/account/arb/:address/otherTokens', async (c) => {
   const { address } = c.req.param();
 
   // Fetch top 5 tokens
-  const tokenListResponse = await fetch(`https://nova-explorer.arbitrum.io/api?module=account&action=tokenlist&address=${address}`);
+  const tokenListResponse = await fetch(`https://api-nova.arbiscan.io/api?module=account&action=tokenlist&address=${address}`);
   const tokenListData = await tokenListResponse.json();
   const topTokens = tokenListData.result.slice(0, 10);
 
