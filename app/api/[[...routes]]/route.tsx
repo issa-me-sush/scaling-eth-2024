@@ -384,7 +384,7 @@ app.frame('/account/morph/:address/otherTokens', async (c) => {
   });
 });
 
-app.frame('/trx/arbnova/:hash', async (c) => {
+app.frame('/trx/arb/:hash', async (c) => {
   const { hash } = c.req.param();
 
   // Fetch transaction details using the provided hash
@@ -541,7 +541,7 @@ console.log("hash",hash)
   });
 });
 
-app.frame('/account/arbnova/:address', async (c) => {
+app.frame('/account/arb/:address', async (c) => {
   const { address } = c.req.param();
 
   // Fetch Ethereum balance and transaction counts (using placeholder URLs)
@@ -651,7 +651,7 @@ console.log("all fetched")
   });
 });
 
-app.frame('/account/arbnova/:address/otherTokens', async (c) => {
+app.frame('/account/arb/:address/otherTokens', async (c) => {
   const { address } = c.req.param();
 
   // Fetch top 5 tokens
