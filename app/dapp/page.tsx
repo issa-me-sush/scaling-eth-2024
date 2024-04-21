@@ -15,7 +15,7 @@ export default function Home() {
   };
 
   const handleAccountSubmit = () => {
-    const frameUrl = `https://data-frame.vercel.app/api/account/morph/${accountAddressarb}`;
+    const frameUrl = `https://data-frame.vercel.app/api/account/morph/${accountAddress}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
@@ -28,7 +28,7 @@ export default function Home() {
   };
 
   const handleAccountArbSubmit = () => {
-    const frameUrl = `https://data-frame.vercel.app/api/account/arb/${accountAddress}`;
+    const frameUrl = `https://data-frame.vercel.app/api/account/arb/${accountAddressarb}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
