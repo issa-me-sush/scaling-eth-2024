@@ -19,7 +19,7 @@ export default function Home() {
       <div className={styles.description}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           <p>
-            Welcome to Morph Frame Generator for Warpcast!
+            Welcome to On chain data Frame Generator for Warpcast!
           </p>
           <a
               href="/dapp"
@@ -30,7 +30,7 @@ export default function Home() {
            
               <code className={styles.code}> {`Main Dapp  `}</code>
    
-            for generating frames on morph! {`(click here)`}
+            for generating frames for on chain data! {`(click here)`}
           </p>
           </a>
         </div>
