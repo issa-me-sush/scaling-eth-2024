@@ -9,26 +9,26 @@ export default function Home() {
   const [generatedUrl, setGeneratedUrl] = useState('');
 
   const handleTxSubmit = () => {
-    const frameUrl = `https://onchaindataframe.vercel.app/api/morph/trx/${txHash}`;
+    const frameUrl = `https://data-frame.vercel.app/api/morph/trx/${txHash}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
 
   const handleAccountSubmit = () => {
-    const frameUrl = `https://onchaindataframe.vercel.app/api/morph/account/${accountAddressarb}`;
+    const frameUrl = `https://data-frame.vercel.app/api/morph/account/${accountAddressarb}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
 
 
   const handleTxArbSubmit = () => {
-    const frameUrl = `https://onchaindataframe.vercel.app/api/arb/trx/${txHasharb}`;
+    const frameUrl = `https://data-frame.vercel.app/api/arb/trx/${txHasharb}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
 
   const handleAccountArbSubmit = () => {
-    const frameUrl = `https://onchaindataframe.vercel.app/api/arb/account/${accountAddress}`;
+    const frameUrl = `https://data-frame.vercel.app/api/arb/account/${accountAddress}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
@@ -62,7 +62,7 @@ export default function Home() {
             type="text"
             placeholder="Enter TX Hash"
             style={{ width: '100%', marginBottom: '1rem', padding: '0.5rem', borderRadius: '5px', border: '1px solid #ccc' ,backgroundColor:"white",color:"black" }}
-            value={txHash}
+            value={txHasharb}
             onChange={(e) => setTxHasharb(e.target.value)}
           />
           <button
@@ -95,7 +95,7 @@ export default function Home() {
             type="text"
             placeholder="Enter Account Address"
             style={{ width: '100%', marginBottom: '1rem', padding: '0.5rem', borderRadius: '5px', border: '1px solid #ccc',backgroundColor:"white",color:"black" }}
-            value={accountAddress}
+            value={accountAddressarb}
             onChange={(e) => setAccountAddressarb(e.target.value)}
           />
           <button
