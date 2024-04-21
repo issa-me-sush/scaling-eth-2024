@@ -4,6 +4,8 @@ import { useState } from 'react';
 export default function Home() {
   const [txHash, setTxHash] = useState('');
   const [accountAddress, setAccountAddress] = useState('');
+  const [txHasharb, setTxHasharb] = useState('');
+  const [accountAddressarb, setAccountAddressarb] = useState('');
   const [generatedUrl, setGeneratedUrl] = useState('');
 
   const handleTxSubmit = () => {
@@ -13,20 +15,20 @@ export default function Home() {
   };
 
   const handleAccountSubmit = () => {
-    const frameUrl = `https://onchaindataframe.vercel.app/api/morph/account/${accountAddress}`;
+    const frameUrl = `https://onchaindataframe.vercel.app/api/morph/account/${accountAddressarb}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
 
 
   const handleTxArbSubmit = () => {
-    const frameUrl = `https://onchaindataframe.vercel.app/api/arbnova/trx/${txHash}`;
+    const frameUrl = `https://onchaindataframe.vercel.app/api/arb/trx/${txHasharb}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
 
   const handleAccountArbSubmit = () => {
-    const frameUrl = `https://onchaindataframe.vercel.app/api/arbnova/account/${accountAddress}`;
+    const frameUrl = `https://onchaindataframe.vercel.app/api/arb/account/${accountAddress}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
@@ -61,7 +63,7 @@ export default function Home() {
             placeholder="Enter TX Hash"
             style={{ width: '100%', marginBottom: '1rem', padding: '0.5rem', borderRadius: '5px', border: '1px solid #ccc' ,backgroundColor:"white",color:"black" }}
             value={txHash}
-            onChange={(e) => setTxHash(e.target.value)}
+            onChange={(e) => setTxHasharb(e.target.value)}
           />
           <button
             style={{ width: '100%', padding: '0.5rem', borderRadius: '5px', backgroundColor: '#4CAF50', color: 'white', border: 'none', cursor: 'pointer' }}
@@ -94,7 +96,7 @@ export default function Home() {
             placeholder="Enter Account Address"
             style={{ width: '100%', marginBottom: '1rem', padding: '0.5rem', borderRadius: '5px', border: '1px solid #ccc',backgroundColor:"white",color:"black" }}
             value={accountAddress}
-            onChange={(e) => setAccountAddress(e.target.value)}
+            onChange={(e) => setAccountAddressarb(e.target.value)}
           />
           <button
             style={{ width: '100%', padding: '0.5rem', borderRadius: '5px', backgroundColor: '#4CAF50', color: 'white', border: 'none', cursor: 'pointer' }}
