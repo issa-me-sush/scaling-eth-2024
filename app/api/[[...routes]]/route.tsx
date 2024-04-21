@@ -640,7 +640,7 @@ console.log("all fetched")
             padding: '0 120px',
             whiteSpace: 'pre-wrap',
  }}>
-          {`ERC-721 Transfers: ${erc721Count}`}
+          {/* {`ERC-721 Transfers: ${erc721Count}`} */}
         </div>
       </div>
     ),
