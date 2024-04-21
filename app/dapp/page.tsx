@@ -9,26 +9,26 @@ export default function Home() {
   const [generatedUrl, setGeneratedUrl] = useState('');
 
   const handleTxSubmit = () => {
-    const frameUrl = `https://data-frame.vercel.app/api/morph/trx/${txHash}`;
+    const frameUrl = `https://data-frame.vercel.app/api/trx/morph/${txHash}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
 
   const handleAccountSubmit = () => {
-    const frameUrl = `https://data-frame.vercel.app/api/morph/account/${accountAddressarb}`;
+    const frameUrl = `https://data-frame.vercel.app/api/account/morph/${accountAddressarb}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
 
 
   const handleTxArbSubmit = () => {
-    const frameUrl = `https://data-frame.vercel.app/api/arb/trx/${txHasharb}`;
+    const frameUrl = `https://data-frame.vercel.app/api/trx/arb/${txHasharb}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
 
   const handleAccountArbSubmit = () => {
-    const frameUrl = `https://data-frame.vercel.app/api/arb/account/${accountAddress}`;
+    const frameUrl = `https://data-frame.vercel.app/api/account/arb/${accountAddress}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
