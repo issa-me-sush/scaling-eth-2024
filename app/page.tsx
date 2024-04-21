@@ -34,7 +34,8 @@ export default function Home() {
           </p>
           </a>
         </div>
-        <div>
+        <div style={{display:'flex',flexDirection:"column", alignItems:"center", gap:"1rem"}}>
+       
         <Image
          
           src="/logo.png"
@@ -43,6 +44,14 @@ export default function Home() {
          alt="morph logo"
           priority
         />
+          <Image
+         
+         src="/arbnova.png"
+        width={100}
+        height={100}
+        alt="morph logo"
+         priority
+       />
          
          
       
