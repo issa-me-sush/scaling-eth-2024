@@ -7,13 +7,13 @@ export default function Home() {
   const [generatedUrl, setGeneratedUrl] = useState('');
 
   const handleTxSubmit = () => {
-    const frameUrl = `https://morph-frame.vercel.app/api/trx/${txHash}`;
+    const frameUrl = `https://morphl2-frame.vercel.app/api/trx/${txHash}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
 
   const handleAccountSubmit = () => {
-    const frameUrl = `https://morph-frame.vercel.app/api/account/${accountAddress}`;
+    const frameUrl = `https://morphl2-frame.vercel.app/api/account/${accountAddress}`;
     setGeneratedUrl(frameUrl);
     navigator.clipboard.writeText(frameUrl);
   };
